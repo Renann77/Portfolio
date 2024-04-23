@@ -1,4 +1,6 @@
-
+*{ 
+    font-family: 'Times New Roman', Times, serif;
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
