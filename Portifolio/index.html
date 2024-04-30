@@ -1,33 +1,72 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meus Projetos</title>
+    <title>Meu Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Meus Projetos</h1>
+        <div class="container">
+            <h1>Renan Dorneles Barboza Boucault</h1>
+            <nav>
+                <ul>
+                    <li><a href="sobre mimm">Sobre</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <nav>
-        <a href="#projeto1">Projeto 1</a>
-        <a href="#projeto2">Projeto 2</a>
-        <a href="#projeto3">Projeto 3</a>
-    </nav>
-    <section id="projeto1">
-        <h2>Projeto 1</h2>
-        <p>Aqui vai uma descrição do projeto 1...</p>
+
+    <section id="sobre">
+        <div class="container">
+            <h2>Sobre Mim</h2>
+            <p>Prazer meu nome é Renan</p>
+            <p>Atualmente estou cursando Analise e Desinvolvimento de Sistemas na Fiap</p>
+
+        </div>
     </section>
-    <section id="projeto2">
-        <h2>Projeto 2</h2>
-        <p>Aqui vai uma descrição do projeto 2...</p>
+
+    <section id="portfolio">
+        <div class="container">
+            <h2>Aqui estão alguns projetos feitos por mim</h2>
+
+            <div class="project">
+                <li class="link"><a href="./Portfolio/clima/index.html"> <img src="/img/Captura de tela 2024-04-30 101039.png" alt="previsão do tempo"></a></li>
+                <h3>Projeto Clima</h3>
+                <p>Esse projeto foi criado para saber a temperatura em todas as cidades do mundo.</p>
+                <p>Dentro desse projeto foram ultilizadas as linguagens Html Css e JavaScript</p>
+            </div>
+
+            <div class="project">
+                <li class="link"><a href="./Portfolio/jogo/index.html"> <img src="/img/Captura de tela 2024-04-30 102657.png" alt="jogo"></a></li>
+                <h3>jogo</h3>
+                <p>esse é um jogo da memoria</p>
+                <p>Dentro desse projeto foram ultilizadas as linguagens Html Css e JavaScript</p>
+            </div>
+            
+        </div>
     </section>
-    <section id="projeto3">
-        <h2>Projeto 3</h2>
-        <p>Aqui vai uma descrição do projeto 3...</p>
+
+    <section id="contato">
+        <div class="container">
+            <h2>Contato</h2>
+            <p>Entre em contato comigo:</p>
+            <form action="enviar.php" method="post">
+                <input type="text" name="nome" placeholder="Seu Nome" required>
+                <input type="email" name="email" placeholder="Seu Email" required>
+                <textarea name="mensagem" placeholder="Sua Mensagem" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
     </section>
+
     <footer>
-        <p>&copy; 2024 Meus Projetos</p>
+        <div class="container">
+            <p>&copy; 2024 Seu Nome. Todos os direitos reservados.</p>
+        </div>
     </footer>
 </body>
 </html>
