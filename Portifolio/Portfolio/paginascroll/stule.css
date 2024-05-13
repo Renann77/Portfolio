@@ -172,12 +172,17 @@ p {
 .section {
   padding-bottom: 5rem;
 }
-
 .section-center {
   width: 90vw;
   margin: 0 auto;
   max-width: 1170px;
 }
+.img-clima {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @media screen and (min-width: 992px) {
   .section-center {
     width: 95vw;
@@ -192,7 +197,7 @@ main {
 =============== 
 Scroll
 ===============
-*/
+*/ 
 /* navbar */
 nav {
   background: var(--clr-white);
