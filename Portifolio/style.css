@@ -337,7 +337,9 @@ header {
 .title span {
   color: var(--clr-secondary);
 }
-#about,
+#about{
+    height: 50vh;
+}
 #services,
 #tours {
   height: 150vh;
