@@ -1,94 +1,136 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <h1>Renan Dorneles Barboza Boucault</h1>
-            <nav>
-                <ul>
-                    <li><a href="sobre mimm">About</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contato">Contact</a></li>
-                </ul>
-            </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio</title>
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <!-- styles -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header id="home">
+      <!-- navbar -->
+      <nav id="nav">
+        <div class="nav-center">
+          <!-- nav header -->
+          <div class="nav-header">
+            <img src="./Portfolio/semaforo/img/1713518210939.jpeg" class="logo" alt="logo" />
+            <button class="nav-toggle">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+          <!-- links -->
+          <div class="links-container">
+            <ul class="links">
+              <li>
+                <a href="#home" class="scroll-link">home</a>
+              </li>
+              <li>
+                <a href="#about" class="scroll-link">about</a>
+              </li>
+              <li>
+                <a href="#services" class="scroll-link">services</a>
+              </li>
+              <li>
+                <a href="#tours" class="scroll-link">tours</a>
+              </li>
+            </ul>
+          </div>
         </div>
+      </nav>
+      <!-- banner -->
+      <div class="banner">
+        <div class="container">
+          <h1>Renan Portfolio</h1> 
+          <p>
+           
+          </p>
+          <a href="#tours" class="scroll-link btn btn-white">explore projects</a>
+        </div>
+      </div>
     </header>
+    <!-- about -->
+    <section id="about" class="section">
+      <div class="title">
+        <h2>about <span>me</span></h2>
 
-    <section id="sobre">
-        <div class="container">
-            <h2>About</h2>
-            <p>My name is Renan Boucault
-                I'm currently studying 
-               systems analysis and development, at FIAP </p>
-
-        </div>
+      </div>
     </section>
+    <!-- services -->
+    <section id="services" class="section">
+      <div class="title">
+        <h2> Services by <span>me</span></h2>
 
-    <section id="portfolio">
-        <div class="conteudo">
-            <h2>Here are some projects maded by me</h2>
-            <div class="clima">
-                <li class="clima"><a href="./Portfolio/clima/index.html"> <img src=".//Portfolio/clima/img/Captura de tela 2024-04-30 101039.png" ></a></li>
-                <h3>temperature</h3>
-                <p>This project was created to know the temperature in every city in the world.</p>
-                <p>Within this project, the following languages were used: Html, Css and JavaScript</p>
-            </div>
+      </div>
 
-            <div class="jogo">
-                <li class="jogo"><a href="./Portfolio/jogo/index.html"> <img src="./Portfolio/jogo/images/Captura de tela 2024-04-30 102657.png" ></a></li>
-                <h3>game</h3>
-                <p>this is a memory game</p>
-                <p>Within this project, the following languages were used: Html, Css and JavaScript</p>
-            </div>
+    </section>
+    <!-- contact -->
+    <section id="tours" class="section">
+      <div class="title">
+       
+        <div class="title">
+          <h2>Here are some projects maded by <span>me</span></h2>
+          <div class="clima">
+            <li class="clima"><a href="./Portfolio/clima/index.html"> <img src="./Portfolio/clima/img/02d.png" ></a></li>
+            <h3>temperature</h3>
             
-            <div class="crud">
-                <li class="crud"><a href="./Portfolio/crud/index.html"> <img src="./Portfolio/crud/img/download.jpg" ></a></li>
-                <h3>Crud</h3>
-                <p>this is a page of C.R.U.D</p>
-                <p>Within this project, the following languages were used: Html, Css and JavaScript</p>
-            </div>
-
-            <div class="musica">
-                <li class="musica"><a href="./Portfolio/musica/index.html"> <img src=".//Portfolio/musica/images/as_you_were (1).webp" ></a></li>
-                <h3>Music</h3>
-                <p>This is a project that mimics Spotify</p>
-                <p>Within this project, the following languages were used: Html, Css and JavaScript</p>
-            </div>
-
-
-            <div class="semaforo">
-                <li class="semaforo"><a href="./Portfolio/semaforo/index.html"> <img src="./Portfolio/semaforo/img/OIP.jpg" ></a></li>
-                <h3>Traffic light</h3>
-                <p>That's the design of a traffic light</p>
-                <p>Within this project, the following languages were used: Html, Css and JavaScript</p>
-            </div>
-
         </div>
+  
+        <div class="jogo">
+            <li class="jogo"><a href="./Portfolio/jogo/index.html"> <img src="./Portfolio/jogo/images/cheeseburger.png"   ></a></li>
+            <h3>game</h3>
+            
+        </div>
+        
+        <div class="crud">
+            <li class="crud"><a href="./Portfolio/crud/index.html"> <img src="./Portfolio/crud/img/download.jpg" ></a></li>
+            <h3>Crud</h3>
+           
+        </div>
+  
+        <div class="musica">
+            <li class="musica"><a href="./Portfolio/musica/index.html"> <img src="./Portfolio/musica/images/boom_bap_flick.webp" ></a></li>
+            <h3>Music</h3>
+            
+        </div>
+  
+  
+        <div class="semaforo">
+            <li class="semaforo"><a href="./Portfolio/semaforo/index.html"> <img src="./Portfolio/semaforo/img/OIP.jpg" ></a></li>
+            <h3>Traffic light</h3>
+          
+        </div>
+
+        <div class="lista">
+            <li class="lista"><a href="./Portfolio/lista/index.html"> <img src="./Portfolio/jogo/images/download (7).png" ></a></li>
+            <h3>List</h3>
+          
+        </div>
+
+        <div class="wiki">
+            <li class="wiki"><a href="./Portfolio/pesquisa/index.html"> <img src="./Portfolio/pesquisa/img/wiki-logo.png" ></a></li>
+            <h3>Wikipedia Renan</h3>
+          
+        </div>
+  
+    </div>
     </section>
-
-    <section id="contato">
-        <div class="container">
-            <h2>Contact</h2>
-            <p>Entre em contato comigo:</p>
-            <form action="enviar.php" method="post">
-                <input type="text" name="nome" placeholder="Seu Nome" required>
-                <input type="email" name="email" placeholder="Seu Email" required>
-                <textarea name="mensagem" placeholder="Sua Mensagem" required></textarea>
-                <button type="submit">Enviar</button>
-            </form>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Todos os direitos reservados.</p>
-        </div>
+    <!-- footer -->
+    <footer class="section">
+      <p>
+        copyright &copy; 
+        <span id="date"></span>. all rights reserved
+      </p>
     </footer>
-</body>
+    <a class="scroll-link top-link" href="#home">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+    <!-- javascript -->
+    <script src="./script.js"></script>
+  </body>
 </html>
