@@ -344,7 +344,20 @@ header {
 #about{
     height: 50vh;
 }
-#services,
+#services{
+  height: 150vh;
+  /* Estilos para as imagens */
+ 
+.curso
+{
+  display: block;
+  margin: 0 auto; /* Centraliza horizontalmente */
+  max-width: 5%; /* Defina a largura máxima desejada */
+  height: auto; /* Isso permite que a altura seja ajustada automaticamente */
+}
+
+
+}
 #tours {
   height: 150vh;
   /* Estilos para as imagens */
@@ -372,9 +385,8 @@ header {
   text-align: center; /* Centraliza o texto */
 }
 }
-#services {
-  background: var(--clr-white);
-}
+
+
 footer {
   background: var(--clr-grey-1);
   padding: 5rem 1rem;
@@ -419,3 +431,82 @@ footer p {
     transform: scale(1);
   }
 }
+#services {
+text-align: center;
+height: 200vh;
+
+}
+
+.curso1{
+  display: block;
+  margin: 0 auto; /* Centraliza horizontalmente */
+  max-width: 10%; /* Defina a largura máxima desejada */
+  height: 100px auto; /* Isso permite que a altura seja ajustada automaticamente */
+  
+}
+
+.curso2{
+  display: block;
+  margin: 0 auto; /* Centraliza horizontalmente */
+  max-width: 10%; /* Defina a largura máxima desejada */
+  height: auto; /* Isso permite que a altura seja ajustada automaticamente */
+}
+
+
+.curso3{
+ 
+  display: block;
+  margin: 0 auto; /* Centraliza horizontalmente */
+  max-width: 10%; /* Defina a largura máxima desejada */
+  height: auto; /* Isso permite que a altura seja ajustada automaticamente */
+}
+
+.curso4{
+  display: block;
+  margin: 0 auto; /* Centraliza horizontalmente */
+  max-width: 10%; /* Defina a largura máxima desejada */
+  height: auto; /* Isso permite que a altura seja ajustada automaticamente */
+}
+
+.curso5{
+  display: block;
+  margin: 0 auto; /* Centraliza horizontalmente */
+  max-width: 10%; /* Defina a largura máxima desejada */
+  height: auto; /* Isso permite que a altura seja ajustada automaticamente */
+}
+
+.curso6{
+  display: block;
+  margin: 0 auto; /* Centraliza horizontalmente */
+  max-width: 10%; /* Defina a largura máxima desejada */
+  height: auto; /* Isso permite que a altura seja ajustada automaticamente */
+}
+
+.curso7{
+  display: block;
+  margin: 0 auto; /* Centraliza horizontalmente */
+  max-width: 10%; /* Defina a largura máxima desejada */
+  height: auto; /* Isso permite que a altura seja ajustada automaticamente */
+}
+
+.curso8{
+  display: block;
+  margin: 0 auto; /* Centraliza horizontalmente */
+  max-width: 10%; /* Defina a largura máxima desejada */
+  height: auto; /* Isso permite que a altura seja ajustada automaticamente */
+}
+
+.curso9{
+  display: block;
+  margin: 0 auto; /* Centraliza horizontalmente */
+  max-width: 10%; /* Defina a largura máxima desejada */
+  height: auto; /* Isso permite que a altura seja ajustada automaticamente */
+}
+
+.curso10{
+  display: block;
+  margin: 0 auto; /* Centraliza horizontalmente */
+  max-width: 10%; /* Defina a largura máxima desejada */
+  height: auto; /* Isso permite que a altura seja ajustada automaticamente */
+}
+
