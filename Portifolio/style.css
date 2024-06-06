@@ -342,7 +342,8 @@ header {
   color: var(--clr-secondary);
 }
 #about{
-    height: 50vh;
+    height: 150vh;
+    
 }
 #services{
   height: 150vh;
@@ -509,4 +510,9 @@ height: 200vh;
   max-width: 10%; /* Defina a largura máxima desejada */
   height: auto; /* Isso permite que a altura seja ajustada automaticamente */
 }
+.imgabout{
+text-align: center;
+width: 1%;
+height: 1%;
 
+}
