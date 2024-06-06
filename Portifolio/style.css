@@ -342,7 +342,7 @@ header {
   color: var(--clr-secondary);
 }
 #about{
-    height: 150vh;
+    height: 250vh;
     
 }
 #services{
@@ -515,4 +515,144 @@ text-align: center;
 width: 1%;
 height: 1%;
 
+}
+
+/* Personal Portfolio Mobile */
+body {
+  
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-family: var(--ff-secondary);
+  background: var(--clr-grey-10);
+  color: var(--clr-grey-1);
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+
+#portfolio {
+  position: absolute;
+  width: 430px;
+  height: 932px;
+  background: linear-gradient(180deg, #5CADA8 0%, #55A19C 50%, #264745 100%);
+  transition-property: var(--clr-black);
+}
+
+/* Header Section */
+#header {
+  position: absolute;
+  width: 430px;
+  height: 113px;
+  left: 0;
+  top: 2px;
+  background:80deg, #5CADA8 0%, #55A19C 50%, #264745 100%;
+  border-radius: 0px 0px 35.6px 35.6px;
+}
+
+#logo-container {
+  
+position: absolute;
+width: 68.66px;
+height: 67.28px;
+left: 35px;
+top: 23px;
+
+   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#vector-bg {
+  position: absolute;
+  left: 9.07%;
+  right: 75.89%;
+  top: 2.9%;
+  bottom: 90.31%;
+  
+  background: #FFFFFF;
+  border: 1.5625px solid #000000;
+}
+
+#vector-fg {
+  position: absolute;
+  left: 8.14%;
+  right: 76.82%;
+  top: 2.47%;
+  bottom: 90.74%;
+  
+  background: #55A19C;
+  border: 1.5625px solid #000000;
+}
+
+#logo-r {
+  position: absolute;
+  width: 36px;
+  height: 40px;
+  left: 49px;
+  top: 35px;
+  
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 40px;
+  text-align: center;
+
+color: #18191F;
+}
+
+/* Content Section */
+#hello-world {
+  position: absolute;
+  width: 302px;
+  height: 40px;
+  left: 0;
+  top: 148px;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 40px; /* identical to box height, or 83% */
+  text-align: center;
+  color: #ffffff;
+}
+
+#intro-text {
+  position: absolute;
+  width: 418px;
+  height: 122px;
+  left: 19px;
+  top: 213px;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 28px; /* or 112% */
+  color: #ffffff;
+}
+
+#frontend-developer {
+  position: absolute;
+  width: 265px;
+  height: 40px;
+  left: 49px;
+  top: 408px;
+  font-weight: 625;
+  font-size: 22px;
+  line-height: 2px; /* identical to box height, or 112% */
+  color: #ffffff;
+  transition: calc();
+  border-radius: var(--clr-black);
+  
+
+
+}
+
+#portfolio-image {
+  position: absolute;
+  width: 296px;
+  height: 370px;
+  left: 29px;
+  top: 436px;
+  background: url('../img/1713518210939.jpeg') no-repeat center center/cover;
+  filter: drop-shadow(9px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 10px;
+
+  transform: scale(1.05); 
+  box-shadow: 0 8px 16px rgb(243, 213, 132);
 }
