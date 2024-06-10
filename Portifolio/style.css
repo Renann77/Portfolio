@@ -342,7 +342,7 @@ header {
   color: var(--clr-secondary);
 }
 #about{
-    height: 170vh;
+    height: 250vh;
     
 }
 #services{
@@ -434,7 +434,7 @@ footer p {
 }
 #services {
 text-align: center;
-height: 170vh;
+height: 200vh;
 
 }
 
@@ -548,7 +548,6 @@ body {
   top: 2px;
   background:80deg, #5CADA8 0%, #55A19C 50%, #264745 100%;
   border-radius: 0px 0px 35.6px 35.6px;
-  text-align: center;
 }
 
 #logo-container {
@@ -648,11 +647,10 @@ color: #18191F;
 
 #portfolio-image {
   position: absolute;
-  width: 296px;
-  height: 370px;
+  width: 200px;
+  height: 300px;
   left: 29px;
   top: 436px;
-  background: url('../img/1713518210939.jpeg') no-repeat center center/cover;
   filter: drop-shadow(9px 4px 4px rgba(0, 0, 0, 0.25));
   border-radius: 10px;
 
