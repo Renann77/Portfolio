@@ -2,6 +2,7 @@
 
 body{
     font-family: 'Arvo', serif;
+    background-image: url("./img/08-fundo-tela-el-capitan.jpg");
 }
 
 .city{
@@ -13,6 +14,7 @@ body{
 }
 
 .container-temp{
+    background-image: url("./img/nuvem.jpg");
     display: flex;
     justify-content: center;
     background-color: rgba(244, 208, 63, 0.2);
