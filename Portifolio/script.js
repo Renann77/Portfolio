@@ -1,86 +1,159 @@
-// Element.getBoundingClientRect() method returns the size of an element and its position relative to the viewport.
-// pageYOffset is a read - only window property that returns the number of pixels the document has been scrolled vertically.
-// slice extracts a section of a string without modifying original string
-//offsetTop - A Number, representing the top position of the element, in pixels
+'use strict';
 
-// ********** set date ************
-// select span
-const date = document.getElementById("date");
-date.innerHTML = new Date().getFullYear();
 
-// ********** close links ************
-const navToggle = document.querySelector(".nav-toggle");
-const linksContainer = document.querySelector(".links-container");
-const links = document.querySelector(".links");
 
-navToggle.addEventListener("click", function () {
-  // linksContainer.classList.toggle("show-links");
+// element toggle function
+const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
-  const linksHeight = links.getBoundingClientRect().height;
-  const containerHeight = linksContainer.getBoundingClientRect().height;
-  if (containerHeight === 0) {
-    linksContainer.style.height = `${linksHeight}px`;
-  } else {
-    linksContainer.style.height = 0;
-  }
-  // console.log(linksContainer.getBoundingClientRect());
-});
 
-// ********** fixed navbar ************
 
-const navbar = document.getElementById("nav");
-const topLink = document.querySelector(".top-link");
+// sidebar variables
+const sidebar = document.querySelector("[data-sidebar]");
+const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 
-window.addEventListener("scroll", function () {
-  const scrollHeight = window.pageYOffset;
-  const navHeight = navbar.getBoundingClientRect().height;
-  if (scrollHeight > navHeight) {
-    navbar.classList.add("fixed-nav");
-  } else {
-    navbar.classList.remove("fixed-nav");
-  }
-  // setup back to top link
+// sidebar toggle functionality for mobile
+sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
 
-  if (scrollHeight > 500) {
-    console.log("helo");
 
-    topLink.classList.add("show-link");
-  } else {
-    topLink.classList.remove("show-link");
-  }
-});
 
-// ********** smooth scroll ************
-// select links
-const scrollLinks = document.querySelectorAll(".scroll-link");
-scrollLinks.forEach((link) => {
-  link.addEventListener("click", (e) => {
-    // prevent default
-    e.preventDefault();
-    // navigate to specific spot
-    const id = e.currentTarget.getAttribute("href").slice(1);
-    const element = document.getElementById(id);
+// testimonials variables
+const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
+const modalContainer = document.querySelector("[data-modal-container]");
+const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
+const overlay = document.querySelector("[data-overlay]");
 
-    const navHeight = navbar.getBoundingClientRect().height;
-    const containerHeight = linksContainer.getBoundingClientRect().height;
-    const fixedNav = navbar.classList.contains("fixed-nav");
-    let position = element.offsetTop - navHeight;
+// modal variable
+const modalImg = document.querySelector("[data-modal-img]");
+const modalTitle = document.querySelector("[data-modal-title]");
+const modalText = document.querySelector("[data-modal-text]");
 
-    if (!fixedNav) {
-      position = position - navHeight;
-    }
-    if (navHeight > 82) {
-      position = position + containerHeight;
-    }
+// modal toggle function
+const testimonialsModalFunc = function () {
+  modalContainer.classList.toggle("active");
+  overlay.classList.toggle("active");
+}
 
-    window.scrollTo({
-      left: 0,
-      top: position,
-    });
-    // close
-    linksContainer.style.height = 0;
+// add click event to all modal items
+for (let i = 0; i < testimonialsItem.length; i++) {
+
+  testimonialsItem[i].addEventListener("click", function () {
+
+    modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
+    modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
+    modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
+    modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
+
+    testimonialsModalFunc();
+
   });
-});
-// calculate heights
+
+}
+
+// add click event to modal close button
+modalCloseBtn.addEventListener("click", testimonialsModalFunc);
+overlay.addEventListener("click", testimonialsModalFunc);
 
 
+
+// custom select variables
+const select = document.querySelector("[data-select]");
+const selectItems = document.querySelectorAll("[data-select-item]");
+const selectValue = document.querySelector("[data-selecct-value]");
+const filterBtn = document.querySelectorAll("[data-filter-btn]");
+
+select.addEventListener("click", function () { elementToggleFunc(this); });
+
+// add event in all select items
+for (let i = 0; i < selectItems.length; i++) {
+  selectItems[i].addEventListener("click", function () {
+
+    let selectedValue = this.innerText.toLowerCase();
+    selectValue.innerText = this.innerText;
+    elementToggleFunc(select);
+    filterFunc(selectedValue);
+
+  });
+}
+
+// filter variables
+const filterItems = document.querySelectorAll("[data-filter-item]");
+
+const filterFunc = function (selectedValue) {
+
+  for (let i = 0; i < filterItems.length; i++) {
+
+    if (selectedValue === "all") {
+      filterItems[i].classList.add("active");
+    } else if (selectedValue === filterItems[i].dataset.category) {
+      filterItems[i].classList.add("active");
+    } else {
+      filterItems[i].classList.remove("active");
+    }
+
+  }
+
+}
+
+// add event in all filter button items for large screen
+let lastClickedBtn = filterBtn[0];
+
+for (let i = 0; i < filterBtn.length; i++) {
+
+  filterBtn[i].addEventListener("click", function () {
+
+    let selectedValue = this.innerText.toLowerCase();
+    selectValue.innerText = this.innerText;
+    filterFunc(selectedValue);
+
+    lastClickedBtn.classList.remove("active");
+    this.classList.add("active");
+    lastClickedBtn = this;
+
+  });
+
+}
+
+
+
+// contact form variables
+const form = document.querySelector("[data-form]");
+const formInputs = document.querySelectorAll("[data-form-input]");
+const formBtn = document.querySelector("[data-form-btn]");
+
+// add event to all form input field
+for (let i = 0; i < formInputs.length; i++) {
+  formInputs[i].addEventListener("input", function () {
+
+    // check form validation
+    if (form.checkValidity()) {
+      formBtn.removeAttribute("disabled");
+    } else {
+      formBtn.setAttribute("disabled", "");
+    }
+
+  });
+}
+
+
+
+// page navigation variables
+const navigationLinks = document.querySelectorAll("[data-nav-link]");
+const pages = document.querySelectorAll("[data-page]");
+
+// add event to all nav link
+for (let i = 0; i < navigationLinks.length; i++) {
+  navigationLinks[i].addEventListener("click", function () {
+
+    for (let i = 0; i < pages.length; i++) {
+      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
+        pages[i].classList.add("active");
+        navigationLinks[i].classList.add("active");
+        window.scrollTo(0, 0);
+      } else {
+        pages[i].classList.remove("active");
+        navigationLinks[i].classList.remove("active");
+      }
+    }
+
+  });
+}
